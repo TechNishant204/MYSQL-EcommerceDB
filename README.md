@@ -1,16 +1,16 @@
-##MYSQL-EcommerceDB
+## MYSQL-EcommerceDB
 **E-Commerce Database System**
-Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
+### Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
 
-##Project Overview
-This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
+## Project Overview
+### This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
 
 **Customers**: Stores customer information.
 **Orders**: Tracks details of customer orders.
 **Products**: Manages product catalog details.
 **Order_Items**: A normalized table linking orders to products for accurate order management.
 
-The system is accompanied by a set of practical SQL queries to demonstrate common e-commerce operations like retrieving customer insights, updating product data, and calculating order statistics.
+### The system is accompanied by a set of practical SQL queries to demonstrate common e-commerce operations like retrieving customer insights, updating product data, and calculating order statistics.
 
 ## Table Structures
 
@@ -46,7 +46,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `product_id`  | INT (FK)      | Foreign key referencing `products`    |
 | `quantity`    | INT           | Quantity of products ordered          |
 
-##Key Features
+## Key Features
 **Normalized Design**: Prevents data redundancy and ensures efficient querying.
 **Relational Structure**: Uses foreign keys to maintain relationships between tables.
 **Sample Queries**: Includes a variety of SQL queries for common e-commerce tasks.
@@ -133,10 +133,10 @@ To view a working demo of the e-commerce database, use a MySQL-compatible tool l
 Detailed query and explanation files are attached. Please take a look at those files for more information.
 
 ---
-##Contributing
-Contributions are welcome! To contribute:
+## Contributing
+### Contributions are welcome! To contribute:
 
-##Fork the repository.
+## Fork the repository.
 Create a new branch (git checkout -b feature-branch).
 Make your changes and commit them (git commit -m "Add feature").
 Push to your branch (git push origin feature-branch).
