@@ -1,0 +1,313 @@
+Queries to Write :
+
+1. Retrieve all customers who have placed an order in the last 30 days.
+
+-- Retrieve customers who placed orders in the last 30 days
+
+SELECT DISTINCT customers.customers_name
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+WHERE order_date >= CURDATE() - INTERVAL 30 DAY;
+
+Result :
+name
+Ethan Hunt
+George Lucas
+Katie Holmes
+Oscar Wilde
+
+-------------------------------------------------------------------
+
+2. Get the total amount of all orders placed by each customer.
+
+-- Get total order amount by customer
+
+SELECT customers.customers_name, SUM(orders.total_amount) AS total_spent
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.customers_name;
+
+Result :
+customers_name    total_spent
+John Doe,         100.00
+Jane Smith,       150.00
+Alice Johnson,    200.00
+Bob Williams,     250.00
+Chris Evans,      300.00
+Diana Prince,     350.00
+Ethan Hunt,       400.00
+Fiona Gallagher,  450.00
+George Lucas,     500.00
+Hannah Baker,     550.00
+Isaac Newton,     600.00
+Jack Ryan,        650.00
+Katie Holmes,     700.00
+Liam Neeson,      750.00
+Monica Geller,    800.00
+Nancy Drew,       850.00
+Oscar Wilde,      900.00
+Phoebe Buffay,    950.00
+Quentin Tarantino,1000.00
+Rachel Green,     1050.00
+
+-----------------------------------------------------------------------
+
+3. Update the price of Product C to 45.00
+
+-- Update price of 'Product C'
+
+UPDATE products
+SET price = 45.00
+WHERE id = 3 ;
+
+Result :
+id, Products_name, price, description
+1, Product A,      25.00, Description for Product A
+2, Product B,      30.00, Description for Product B
+3, Product C,      45.00, Description for Product C    --- Price value updated
+4, Product D,      50.00, Description for Product D
+5, Product E,      60.00, Description for Product E
+6, Product F,      20.00, Description for Product F
+7, Product G,      45.00, Description for Product G
+8, Product H,      35.00, Description for Product H
+9, Product I,      55.00, Description for Product I
+10, Product J,     65.00, Description for Product J
+11, Product K,     25.00, Description for Product K
+12, Product L,     75.00, Description for Product L
+13, Product M,     85.00, Description for Product M
+14, Product N,     95.00, Description for Product N
+15, Product O,     100.00, Description for Product O
+16, Product P,     110.00, Description for Product P
+17, Product Q,     120.00, Description for Product Q
+18, Product R,     130.00, Description for Product R
+19, Product S,     140.00, Description for Product S
+20, Product T,     150.00, Description for Product T
+
+SELECT * FROM products WHERE id = 3;
+
+Result :
+id, Products_name, price, description
+3, Product C,      45.00, Description for Product C 
+
+------------------------------------------------------------
+
+4. Add a new column 'discount' to the products table
+
+-- Add a new column 'discount' to the products table
+
+ALTER TABLE products
+ADD COLUMN discount DECIMAL(5, 2) DEFAULT 0.00;
+
+SELECT * FROM products;
+
+Result :
+id, Products_name, price, description,               discount
+1, Product A,      25.00, Description for Product A,  0.00
+2, Product B,      30.00, Description for Product B,  0.00
+3, Product C,      45.00, Description for Product C,  0.00
+4, Product D,      50.00, Description for Product D,  0.00
+5, Product E,      60.00, Description for Product E,  0.00
+6, Product F,      20.00, Description for Product F,  0.00
+7, Product G,      45.00, Description for Product G,  0.00
+8, Product H,      35.00, Description for Product H,  0.00
+9, Product I,      55.00, Description for Product I,  0.00
+10, Product J,     65.00, Description for Product J,  0.00
+11, Product K,     25.00, Description for Product K,  0.00
+12, Product L,     75.00, Description for Product L,  0.00
+13, Product M,     85.00, Description for Product M,  0.00
+14, Product N,     95.00, Description for Product N,  0.00
+15, Product O,     100.00, Description for Product O, 0.00
+16, Product P,     110.00, Description for Product P, 0.00
+17, Product Q,     120.00, Description for Product Q  0.00
+18, Product R,     130.00, Description for Product R, 0.00
+19, Product S,     140.00, Description for Product S, 0.00
+20, Product T,     150.00, Description for Product T, 0.00
+
+-----------------------------------------------------------------------
+
+5. Retrieve the top 3 products with the highest price
+
+-- Get top 3 products with highest price
+
+SELECT Products_name, price
+FROM products
+ORDER BY price DESC
+LIMIT 3; 
+
+Result :
+Products_name	price
+Product T	    150.00
+Product S	    140.00
+Product R	    130.00
+
+-----------------------------------------------------------------------
+
+6. Get the names of customers who have ordered Product A
+
+-- Get customer names who ordered 'Product A'
+
+SELECT DISTINCT customers.customers_name
+FROM customers                                                                           
+JOIN orders ON customers.id = orders.customer_id
+JOIN order_items ON orders.id = order_items.order_id
+JOIN products ON order_items.product_id = products.id
+WHERE products.products_name = 'Product A';
+
+Result :
+customers_name
+John Doe
+Bob Williams
+Hannah Baker
+
+
+-----------------------------------------------------------------------
+
+7. Join the orders and customers tables to retrieve the customers name and order date for each order
+
+-- Get customer name and order date for each order
+
+SELECT customers.customers_name, orders.order_date
+FROM customers
+JOIN orders ON customers.id = orders.customer_id;
+
+Result :
+customers_name	order_date
+John Doe	    2024-08-15
+Jane Smith	    2024-09-01
+Alice Johnson	2024-08-25
+Bob Williams	2024-09-03
+Chris Evans	    2024-08-29
+Diana Prince	2024-08-20
+Ethan Hunt	    2024-09-05
+Fiona Gallagher	2024-08-15
+George Lucas	2024-09-07
+Hannah Baker	2024-08-22
+Isaac Newton	2024-09-01
+Jack Ryan	    2024-08-19
+Katie Holmes	2024-09-09
+Liam Neeson	    2024-08-25
+Monica Geller	2024-09-03
+Nancy Drew	    2024-08-27
+Oscar Wilde	    2024-09-10
+Phoebe Buffay	2024-08-31
+Quentin Tarantino	2024-09-02
+Rachel Green	2024-08-28
+
+-------------------------------------------------------------------------------
+
+8. Retrieve the orders with a total amount greater than 150.00
+
+-- Retrieve orders with total amount greater than 150.00
+
+SELECT id, total_amount
+FROM orders
+WHERE total_amount > 150.00;
+
+Result :
+id	total_amount
+3	200.00
+4	250.00
+5	300.00
+6	350.00
+7	400.00
+8	450.00
+9	500.00
+10	550.00
+11	600.00
+12	650.00
+13	700.00
+14	750.00
+15	800.00
+16	850.00
+17	900.00
+18	950.00
+19	1000.00
+20	1050.00
+
+
+----------------------------------------------------------------------------------
+
+9. Normalize the database by creating a separate table for order items and updating the orders table to reference the order_items table
+
+-- Create 'order_items' table
+
+CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT DEFAULT 1,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Check whether the table is created successfully
+DESCRIBE order_items;
+
+-- Inserting sample data for order items table
+
+INSERT INTO order_items (order_id, product_id, quantity)
+VALUES
+(1, 1, 2),
+(1, 2, 1),
+(2, 3, 1),
+(2, 4, 3),
+(3, 5, 2),
+(3, 6, 1),
+(4, 1, 3),
+(4, 7, 2),
+(5, 8, 1),
+(5, 2, 1),
+(6, 9, 1),
+(6, 10, 2),
+(7, 3, 1),
+(7, 5, 2),
+(8, 6, 1),
+(8, 8, 1),
+(9, 2, 1),
+(9, 4, 2),
+(10, 10, 1),
+(10, 1, 3);
+
+-- Retrieve the order items table
+
+SELECT * FROM ecommerce.order_items;
+
+Result :
+id	order_id	product_id	quantity
+1	      1	        1	        2
+2	      1	        2	        1
+3	      2	        3	        1
+4	      2	        4	        3
+5	      3	        5	        2
+6	      3	        6	        1
+7	      4	        1	        3
+8	      4	        7	        2
+9	      5	        8         1
+10	    5	        2	        1
+11	    6	        9	        1
+12	    6	        10	      2
+13	    7	        3	        1
+14	    7	        5	        2
+15	    8	        6	        1
+16	    8	        8	        1
+17	    9	        2	        1
+18	    9	        4	        2
+19	   10	        10	      1
+20	   10	        1	        3
+
+
+-------------------------------------------------------------------------------------------
+
+10. Retrieve the average total of all orders
+
+-- Get the average total of all orders
+SELECT AVG(total_amount) AS average_order_amount
+FROM orders;
+
+Result :
+average_order_amount
+575.000000
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+                                                           XXX
