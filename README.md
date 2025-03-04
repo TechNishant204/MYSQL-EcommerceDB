@@ -1,8 +1,8 @@
-## MySQL-EcommerceDB : E-Commerce Database System🛢
+## 🛢MySQL-EcommerceDB : E-Commerce Database System
 
 Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
 
-##🚀 Project Overview
+## 🚀Project Overview
 This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
 
 **Customers**: Stores customer information. <br>
@@ -46,7 +46,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `product_id`  | INT (FK)      | Foreign key referencing `products`    |
 | `quantity`    | INT           | Quantity of products ordered          |
 
-##🎯 Key Features
+## 🎯Key Features
 **Normalized Design**: Prevents data redundancy and ensures efficient querying.
 **Relational Structure**: Uses foreign keys to maintain relationships between tables.
 **Sample Queries**: Includes a variety of SQL queries for common e-commerce tasks.
@@ -125,7 +125,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 - **Step 2**: Insert sample data into each table using the provided `INSERT` statements.
 - **Step 3**: Run the SQL queries to test data retrieval and manipulation.
 
-##🛠️ Demo
+## 🛠️Demo
 
 To view a working demo of the e-commerce database, use a MySQL-compatible tool like **phpMyAdmin** or **MySQL Workbench**. All sample queries can be tested there for quick verification of data.
 
@@ -136,7 +136,7 @@ Detailed query and explanation files are attached. Please take a look at those f
 ## 📝Contributing
 ### Contributions are welcome! To contribute:
 
-## Fork the repository.
+## 🔗Fork the repository.
 Create a new branch (git checkout -b feature-branch).<br>
 Make your changes and commit them (git commit -m "Add feature").<br>
 Push to your branch (git push origin feature-branch).<br>
