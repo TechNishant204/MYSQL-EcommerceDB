@@ -5,12 +5,12 @@ Welcome to the E-Commerce Database System, a simple yet robust database manageme
 ## Project Overview
 This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
 
-**Customers**: Stores customer information.
-**Orders**: Tracks details of customer orders.
-**Products**: Manages product catalog details.
-**Order_Items**: A normalized table linking orders to products for accurate order management.
+**Customers**: Stores customer information. <br>
+**Orders**: Tracks details of customer orders.<br>
+**Products**: Manages product catalog details.<br>
+**Order_Items**: A normalized table linking orders to products for accurate order management.<br>
 
-### The system is accompanied by a set of practical SQL queries to demonstrate common e-commerce operations like retrieving customer insights, updating product data, and calculating order statistics.
+The system is accompanied by a set of practical SQL queries to demonstrate common e-commerce operations like retrieving customer insights, updating product data, and calculating order statistics.
 
 ## Table Structures
 
