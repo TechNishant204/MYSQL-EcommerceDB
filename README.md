@@ -1,9 +1,9 @@
-## MYSQL-EcommerceDB
-**E-Commerce Database System**
-### Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
+## MySQL-EcommerceDB : E-Commerce Database System
+
+Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
 
 ## Project Overview
-### This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
+This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
 
 **Customers**: Stores customer information.
 **Orders**: Tracks details of customer orders.
