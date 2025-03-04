@@ -1,8 +1,8 @@
-## MySQL-EcommerceDB : E-Commerce Database System
+## MySQL-EcommerceDB : E-Commerce Database System🛢
 
 Welcome to the E-Commerce Database System, a simple yet robust database management system built using MySQL. This project is designed to efficiently handle key e-commerce operations such as managing customers, orders, and products. The database adheres to normalization principles to ensure data consistency, integrity, and optimal performance.
 
-## Project Overview
+##🚀 Project Overview
 This MySQL-based system provides a foundation for an e-commerce platform by organizing data into four core tables:
 
 **Customers**: Stores customer information. <br>
@@ -12,9 +12,9 @@ This MySQL-based system provides a foundation for an e-commerce platform by orga
 
 The system is accompanied by a set of practical SQL queries to demonstrate common e-commerce operations like retrieving customer insights, updating product data, and calculating order statistics.
 
-## Table Structures
+## 📅Table Structures
 
-### 1. Customers
+### 1. Customers📅
 | Column      | Type          | Description                         |
 |-------------|---------------|-------------------------------------|
 | `id`        | INT (PK, AI)  | Unique identifier for each customer |
@@ -22,7 +22,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `email`     | VARCHAR(255)  | Customer's email address            |
 | `address`   | VARCHAR(255)  | Customer's address                  |
 
-### 2. Orders
+### 2. Orders📅
 | Column        | Type          | Description                         |
 |---------------|---------------|-------------------------------------|
 | `id`          | INT (PK, AI)  | Unique identifier for each order    |
@@ -30,7 +30,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `order_date`  | DATE          | Date the order was placed           |
 | `total_amount`| DECIMAL(10, 2)| Total amount for the order          |
 
-### 3. Products
+### 3. Products📅
 | Column           | Type          | Description                        |
 |------------------|---------------|------------------------------------|
 | `id`             | INT (PK, AI)  | Unique identifier for each product |
@@ -38,7 +38,7 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `price`          | DECIMAL(10, 2)| Product's price                    |
 | `description`    | TEXT          | Product's description              |
 
-### 4. Order_Items
+### 4. Order_Items📅
 | Column        | Type          | Description                           |
 |---------------|---------------|---------------------------------------|
 | `id`          | INT (PK, AI)  | Unique identifier for each order item |
@@ -46,12 +46,12 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `product_id`  | INT (FK)      | Foreign key referencing `products`    |
 | `quantity`    | INT           | Quantity of products ordered          |
 
-## Key Features
+##🎯 Key Features
 **Normalized Design**: Prevents data redundancy and ensures efficient querying.
 **Relational Structure**: Uses foreign keys to maintain relationships between tables.
 **Sample Queries**: Includes a variety of SQL queries for common e-commerce tasks.
 
-## Queries Included
+## 🔍Queries Included
 
 1. **Retrieve all customers who have placed an order in the last 30 days**:
     ```sql
@@ -119,21 +119,21 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
     FROM orders;
     ```
 
-## How to Use
+## ⚙️How to Use
 
 - **Step 1**: Create the database by running the SQL provided for creating tables.
 - **Step 2**: Insert sample data into each table using the provided `INSERT` statements.
 - **Step 3**: Run the SQL queries to test data retrieval and manipulation.
 
-## Demo
+##🛠️ Demo
 
 To view a working demo of the e-commerce database, use a MySQL-compatible tool like **phpMyAdmin** or **MySQL Workbench**. All sample queries can be tested there for quick verification of data.
 
-### Note
+### 💬Note
 Detailed query and explanation files are attached. Please take a look at those files for more information.
 
 ---
-## Contributing
+## 📝Contributing
 ### Contributions are welcome! To contribute:
 
 ## Fork the repository.
