@@ -47,9 +47,9 @@ The system is accompanied by a set of practical SQL queries to demonstrate commo
 | `quantity`    | INT           | Quantity of products ordered          |
 
 ## 🎯Key Features
-**Normalized Design**: Prevents data redundancy and ensures efficient querying.
-**Relational Structure**: Uses foreign keys to maintain relationships between tables.
-**Sample Queries**: Includes a variety of SQL queries for common e-commerce tasks.
+**Normalized Design**: Prevents data redundancy and ensures efficient querying.<br>
+**Relational Structure**: Uses foreign keys to maintain relationships between tables.<br>
+**Sample Queries**: Includes a variety of SQL queries for common e-commerce tasks.<br>
 
 ## 🔍Queries Included
 
