@@ -137,7 +137,7 @@ Detailed query and explanation files are attached. Please take a look at those f
 ### Contributions are welcome! To contribute:
 
 ## Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes and commit them (git commit -m "Add feature").
-Push to your branch (git push origin feature-branch).
-Open a pull request with a clear description of your changes.
+Create a new branch (git checkout -b feature-branch).<br>
+Make your changes and commit them (git commit -m "Add feature").<br>
+Push to your branch (git push origin feature-branch).<br>
+Open a pull request with a clear description of your changes.<br>
